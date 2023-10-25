@@ -7,10 +7,13 @@
 
 using namespace std;
 
-class BankAccountRecord
+class BankAccountRecord //CLASS 
 {
 public:
     BankAccountRecord(string FirstName, string LastName, double Amount, int AccountNum);
+
+    string GetFirstName();
+    void SetFirstName(string FirstName);
 
     string GetName() const;
     void SetName(string inName);
@@ -21,6 +24,7 @@ public:
     void Print() const;
 
 private:
+//DECLARE VARIABLES 
     string FirstName;
     string LastName;
     double Amount;
