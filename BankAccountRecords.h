@@ -10,17 +10,22 @@ using namespace std;
 class BankAccountRecord //CLASS 
 {
 public:
+    //
     BankAccountRecord(string FirstName, string LastName, double Amount, int AccountNum);
 
     string GetFirstName();
     void SetFirstName(string FirstName);
 
-    string GetName() const;
-    void SetName(string inName);
+    string GetLastName();
+    void SetLastName(string LastName);
 
     double GetAmount() const;
-    void SetAmount(double inAmount);
+    void SetAmount(double Amount);
 
+    int GetAccountNum(); 
+    void SetAccountNum(double AccountNum); 
+
+    //FUNCTION TO PRINT DETAILS FROM BANKACCOUNTRECORD
     void Print() const;
 
 private:
