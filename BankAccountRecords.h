@@ -1,5 +1,5 @@
-#ifndef BANKACCOUNTRECORD_H_
-#define BANKACCOUNTRECORD_H_
+#ifndef BANKACCOUNTRECORDS_H_
+#define BANKACCOUNTRECORDS_H_
 
 #include <iostream>
 #include <string>
@@ -11,19 +11,19 @@ class BankAccountRecord //CLASS
 {
 public:
     //
-    BankAccountRecord(string FirstName, string LastName, double Amount, int AccountNum);
+    BankAccountRecord(string inFirstName, string inLastName, double inAmount, int inAccountNum);
 
-    string GetFirstName();
-    void SetFirstName(string FirstName);
+    string GetFirstName() const;
+    void SetFirstName(string inFirstName);
 
-    string GetLastName();
-    void SetLastName(string LastName);
+    string GetLastName() const;
+    void SetLastName(string inLastName);
 
     double GetAmount() const;
-    void SetAmount(double Amount);
+    void SetAmount(double inAmount);
 
-    int GetAccountNum(); 
-    void SetAccountNum(double AccountNum); 
+    int GetAccountNum() const; 
+    void SetAccountNum(double inAccountNum); 
 
     //FUNCTION TO PRINT DETAILS FROM BANKACCOUNTRECORD
     void Print() const;
