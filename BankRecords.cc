@@ -12,5 +12,5 @@ BankAccountRecord::BankAccountRecord(string inFirstName, string inLastName, doub
 
 //Accessor and mutator for first name
 string BankAccountRecord::GetFirstName() const {
-    return 
+    return FirstName; 
 }
