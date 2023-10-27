@@ -14,7 +14,7 @@ int main()
     int AccountNums; 
     const int MaxNumAccounts = 100; 
     string filename; 
-    int countAccounts; 
+    int countAccounts = 0; 
     
     //GET THE FILE NAME OF THE FILE WE WILL BE READING FROM
     cout << "Enter in the name of the file that we will be reading from below:" << endl; 
@@ -25,6 +25,16 @@ int main()
         cout << "ERROR: The file cannot open. Try again." << endl; 
         return 1; //NOT ALL IS WELL!! MISSION ABORT 
     }
+
+    while (countAccounts <= MaxNumAccounts) {
+        BankAccountRecords(firstname, lastname, amount, AccountNums)
+        countAccounts++;
+    }
+
+    //include when eof reached or error stop here. 
+    
+
+    //loop where 
 
 
     //ALL WELL :D
