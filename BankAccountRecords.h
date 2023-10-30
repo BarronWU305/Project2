@@ -26,9 +26,9 @@ public:
     void SetAccountNum(double inAccountNum); 
 
     //FUNCTION TO PRINT DETAILS FROM BANKACCOUNTRECORD
-    void Print() const;
+    void printInfo() const;
 
-private:
+protected:
 //DECLARE VARIABLES 
     string FirstName;
     string LastName;
