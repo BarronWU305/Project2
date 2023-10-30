@@ -36,7 +36,7 @@ int main()
     //use a vector to store objects from BankAccountRecord
     vector<BankAccountRecord> records; 
 
-    while (countAccounts <= MaxNumAccounts && inputFile >> firstname >> lastname >> amount >> AccountNums) {
+    while (inputFile >> firstname >> lastname >> amount >> AccountNums) {
         records.push_back(BankAccountRecord(firstname, lastname, amount, AccountNums));
         countAccounts++;
     }
