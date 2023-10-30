@@ -27,22 +27,17 @@ int main()
     if (!inputFile) {
         cout << "ERROR: The file cannot open. Try again." << endl; 
     }
-    
-    //for when end of file reached
-    else if (inputFile.eof()) {
-        cout << "End of the file" << endl; 
-    }
 
     //use a vector to store objects from BankAccountRecord
     vector<BankAccountRecord> records; 
 
-    while (countAccounts <= MaxNumAccounts && inputFile >> firstname >> lastname >> amount >> AccountNums) {
+    while (countAccounts < MaxNumAccounts && inputFile >> firstname >> lastname >> amount >> AccountNums) {
         records.push_back(BankAccountRecord(firstname, lastname, amount, AccountNums));
         countAccounts++;
     }
 
     //loop where 
-    for (int idx = countAccounts - 1; idx >= 0; idx++) {
+    for (int idx = countAccounts - 1; idx >= 0; idx--) {
         
         records[idx].printInfo(); //call my printInfo function
     }
