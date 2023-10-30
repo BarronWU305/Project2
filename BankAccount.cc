@@ -1,7 +1,9 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-//#include <BankAccountRecords.h>
+#include <vector>
+#include "BankAccountRecords.h"
+//ask dr.wiegand
 
 using namespace std;
 
@@ -20,21 +22,34 @@ int main()
     cout << "Enter in the name of the file that we will be reading from below:" << endl; 
     cin >> filename; 
 
+    //For input errors when file open. 
     ifstream inputFile(filename); 
     if (!inputFile) {
         cout << "ERROR: The file cannot open. Try again." << endl; 
-        return 1; //NOT ALL IS WELL!! MISSION ABORT 
+    }
+    
+    //for when end of file reached
+    else if (inputFile.eof()) {
+        cout << "End of the file" << endl; 
     }
 
-    while (countAccounts <= MaxNumAccounts) {
-        BankAccountRecords(firstname, lastname, amount, AccountNums)
+    //use a vector to store objects from BankAccountRecord
+    vector<BankAccountRecord> records; 
+
+    while (countAccounts <= MaxNumAccounts && inputFile >> firstname >> lastname >> amount >> AccountNums) {
+        records.push_back(BankAccountRecord(firstname, lastname, amount, AccountNums));
         countAccounts++;
     }
 
-    //include when eof reached or error stop here. 
-    
-
     //loop where 
+    for (int idx = countAccounts - 1; idx >= 0; idx--) {
+        
+        records[idx].printInfo(); //call my printInfo function
+    }
+
+
+    //Close file 
+    inputFile.close(); 
 
 
     //ALL WELL :D
