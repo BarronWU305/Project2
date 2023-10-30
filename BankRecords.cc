@@ -23,7 +23,7 @@ string BankAccountRecord::GetLastName() const {
     return LastName;
 }
 
-void BankAccountRecord::SetFirstName(string inLastName) {
+void BankAccountRecord::SetLastName(string inLastName) {
     LastName = inLastName;
 }
 
