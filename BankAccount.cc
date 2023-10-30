@@ -42,7 +42,7 @@ int main()
     }
 
     //loop where 
-    for (int idx = countAccounts - 1; idx >= 0; idx--) {
+    for (int idx = countAccounts - 1; idx >= 0; idx++) {
         
         records[idx].printInfo(); //call my printInfo function
     }
