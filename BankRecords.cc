@@ -60,6 +60,7 @@ void BankAccountRecord::printInfo() const
     int remainingAmount; 
     cout << "--------------------------------------------------------------------------" << endl;
     string infoString = FirstName + " " + LastName + " (" + to_string(AccountNum) + "):";
+    cout << infoString; 
     remainingAmount = maxAmountWidth - (FirstName.length() + LastName.length() + to_string(AccountNum).length());
     for (int i = 0; i < remainingAmount; i++) {
         cout << " ";
