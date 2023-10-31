@@ -46,7 +46,8 @@ int main()
     //Close file 
     inputFile.close(); 
 
-
+    cout << "--------------------------------------------------------------------------" << endl;
+    
     //ALL WELL :D
     return 0;
 }
