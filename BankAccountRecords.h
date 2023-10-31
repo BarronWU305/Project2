@@ -10,9 +10,10 @@ using namespace std;
 class BankAccountRecord // CLASS
 {
 public:
-    //
+    //CONST. FOR INIT BANKACCOUNTRECORD OBJ
     BankAccountRecord(string inFirstName, string inLastName, double inAmount, int inAccountNum);
 
+    //GETTER AND SETTER FUNCTIONS
     string GetFirstName() const;
     void SetFirstName(string inFirstName);
 
@@ -28,6 +29,7 @@ public:
     // FUNCTION TO PRINT DETAILS FROM BANKACCOUNTRECORD
     void printInfo() const;
 
+//CHANGED FROM PRIVATE TO PROTECTED AFTER LEARNING IN CLASS
 protected:
     // DECLARE VARIABLES
     string FirstName;

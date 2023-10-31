@@ -1,6 +1,6 @@
 #include "BankAccountRecords.h"
 
-// Initilization constructors for the bank record
+// INITILIZATION CONSTRUCTORS FOR THE BANK RECORD
 
 BankAccountRecord::BankAccountRecord(string inFirstName, string inLastName, double inAmount, int inAccountNum)
 {
@@ -10,7 +10,7 @@ BankAccountRecord::BankAccountRecord(string inFirstName, string inLastName, doub
     AccountNum = inAccountNum;
 }
 
-// Accessor and mutator for first name
+// ACCESSOR AND MUTATOR FOR FIRST NAME
 string BankAccountRecord::GetFirstName() const
 {
     return FirstName;
@@ -32,7 +32,7 @@ void BankAccountRecord::SetLastName(string inLastName)
     LastName = inLastName;
 }
 
-// Accessor and mutator for Amount
+// ACCESSOR AND MUTATOR FOR AMOUNT
 double BankAccountRecord::GetAmount() const
 {
     return Amount;
@@ -42,7 +42,7 @@ void BankAccountRecord::SetAmount(double inAmount)
     Amount = inAmount;
 }
 
-// Accessor and mutator for Account number
+// ACCESSOR AND MUTATOR FOR ACCOUNTNUM
 int BankAccountRecord::GetAccountNum() const
 {
     return AccountNum;
@@ -53,19 +53,20 @@ void BankAccountRecord::SetAccountNum(double inAccountNum)
     AccountNum = inAccountNum;
 }
 
-// Print function
+// PRINT FUNCTION
 void BankAccountRecord::printInfo() const
 {
-    //vars needed to make cout pretty and lined up 
-    int maxAmountWidth = 27; 
+    // VARS NEEDED FOR COUT
+    int maxAmountWidth = 27;
     int remainingAmount;
-    string infoString = FirstName + " " + LastName + " (" + to_string(AccountNum) + "):"; 
-    cout << infoString; 
+    // STRING FOR FIRST, LAST, AND ACCOUNT NUM
+    string infoString = FirstName + " " + LastName + " (" + to_string(AccountNum) + "):";
+    cout << infoString;
+    // FINDS THE REMAINING AMOUNT IN ORDER TO HELP LINE DOLLAR SIGN AND AMOUNT UP
     remainingAmount = maxAmountWidth - (FirstName.length() + LastName.length() + to_string(AccountNum).length());
-    for (int i = 0; i < remainingAmount; i++) {
+    for (int i = 0; i < remainingAmount; i++)
+    {
         cout << " ";
     }
     cout << fixed << setprecision(2) << "$" << GetAmount() << endl;
-
-    //OG had  cout << setw(0) << GetFirstName() << " " << GetLastName() << " (" << GetAccountNum() << "): " << fixed << setw(15) << setprecision(2) << "$" << GetAmount() << endl;
 }

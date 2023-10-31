@@ -1,14 +1,14 @@
 #include <iostream>
 #include <string>
-#include <fstream> //allows us to use filestream
-#include <vector> //for vectors
-#include "BankAccountRecords.h" //header file
+#include <fstream> //ALLOWS US TO USE FILESTREAM
+#include <vector> //FOR VECTORS
+#include "BankAccountRecords.h" //HEADER FILE
 
 using namespace std;
 
 int main()
 {
-    // VARS
+    //VARS
     string firstname;
     string lastname;
     double amount;
@@ -21,34 +21,35 @@ int main()
     cout << "Enter in the name of the file that we will be reading from below:" << endl;
     cin >> filename;
 
-    // For input errors when file open.
+    // FOR INPUT ERRORS WHEN FILE OPEN
     ifstream inputFile(filename);
     if (!inputFile)
     {
         cout << "ERROR: The file cannot open. Try again." << endl;
     }
 
-    // use a vector to store objects from BankAccountRecord
+    // USE A VECTROR TO STORE OBJECTS FROM BANKACCOUNTRECORD
     vector<BankAccountRecord> records;
 
-    
+    //WHILE LOOP THROUGH INPUT FILE UNTIL THE MAX NUM OF ACCOUNTS IS REACHED OR NO MORE INPUT DATA.
+    //THEN ADDS THESE OBJECTS TO RECORDS VECTOR.
     while (countAccounts < MaxNumAccounts && inputFile >> lastname >> firstname >> amount >> AccountNums)
     {
         records.push_back(BankAccountRecord(firstname, lastname, amount, AccountNums));
         countAccounts++;
     }
 
-    // loop
+    //GO THROUGH RECORDS IN VECTOR IN REVERSE ORDER
     for (int idx = countAccounts - 1; idx >= 0; idx--)
     {
 
-        records[idx].printInfo(); // call my printInfo function
+        records[idx].printInfo(); // CALL PRINT INFO
     }
 
-    // Close file
+    // CLOSES FILE
     inputFile.close();
 
 
-    // ALL WELL :D
+    // ALL WELL
     return 0;
 }
