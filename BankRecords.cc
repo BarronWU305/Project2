@@ -56,9 +56,11 @@ void BankAccountRecord::SetAccountNum(double inAccountNum)
 // Print function
 void BankAccountRecord::printInfo() const
 {
-    int maxAmountWidth = 30; 
-    int remainingAmount; 
+    //vars needed to make cout pretty and lined up 
+    
     string infoString = FirstName + " " + LastName + " (" + to_string(AccountNum) + "):";
+    int maxAmountWidth = infoString.length() + 10; 
+     int remainingAmount; 
     cout << infoString; 
     remainingAmount = maxAmountWidth - (FirstName.length() + LastName.length() + to_string(AccountNum).length());
     for (int i = 0; i < remainingAmount; i++) {
