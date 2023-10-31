@@ -57,5 +57,5 @@ void BankAccountRecord::SetAccountNum(double inAccountNum)
 void BankAccountRecord::printInfo() const
 {
     cout << "--------------------------------------------------------------------------" << endl;
-    cout << " " << GetFirstName() << " " << GetLastName() << " (" << GetAccountNum() << "): " << setw(15) << right << fixed << setprecision(2) << "$" << GetAmount() << endl;
+    cout << " " << GetFirstName() << " " << GetLastName() << " (" << GetAccountNum() << "): " << setw(20) << right << fixed << setprecision(2) << "$" << GetAmount() << endl;
 }
