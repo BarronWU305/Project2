@@ -1,9 +1,8 @@
 #include <iostream>
 #include <string>
-#include <fstream>
-#include <vector>
-#include "BankAccountRecords.h"
-// ask dr.wiegand
+#include <fstream> //allows us to use filestream
+#include <vector> //for vectors
+#include "BankAccountRecords.h" //header file
 
 using namespace std;
 
@@ -32,13 +31,14 @@ int main()
     // use a vector to store objects from BankAccountRecord
     vector<BankAccountRecord> records;
 
+    
     while (countAccounts < MaxNumAccounts && inputFile >> lastname >> firstname >> amount >> AccountNums)
     {
         records.push_back(BankAccountRecord(firstname, lastname, amount, AccountNums));
         countAccounts++;
     }
 
-    // loop where
+    // loop
     for (int idx = countAccounts - 1; idx >= 0; idx--)
     {
 
