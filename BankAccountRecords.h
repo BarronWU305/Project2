@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class BankAccountRecord //CLASS 
+class BankAccountRecord // CLASS
 {
 public:
     //
@@ -22,14 +22,14 @@ public:
     double GetAmount() const;
     void SetAmount(double inAmount);
 
-    int GetAccountNum() const; 
-    void SetAccountNum(double inAccountNum); 
+    int GetAccountNum() const;
+    void SetAccountNum(double inAccountNum);
 
-    //FUNCTION TO PRINT DETAILS FROM BANKACCOUNTRECORD
+    // FUNCTION TO PRINT DETAILS FROM BANKACCOUNTRECORD
     void printInfo() const;
 
 protected:
-//DECLARE VARIABLES 
+    // DECLARE VARIABLES
     string FirstName;
     string LastName;
     double Amount;
