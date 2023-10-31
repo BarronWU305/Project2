@@ -48,8 +48,6 @@ int main()
     // Close file
     inputFile.close();
 
-    // Only added for my sanity and piece of mind.
-    cout << "--------------------------------------------------------------------------" << endl;
 
     // ALL WELL :D
     return 0;
