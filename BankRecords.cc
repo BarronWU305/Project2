@@ -59,4 +59,6 @@ void BankAccountRecord::printInfo() const
     cout << "--------------------------------------------------------------------------" << endl;
     cout << setw(0) << GetFirstName() << " " << GetLastName() << " (" << GetAccountNum() << "): ";
     cout << fixed << setw(15) << setprecision(2) << "$" << GetAmount() << endl;
+
+    //OG had  cout << setw(0) << GetFirstName() << " " << GetLastName() << " (" << GetAccountNum() << "): " << fixed << setw(15) << setprecision(2) << "$" << GetAmount() << endl;
 }
