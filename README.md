@@ -1,4 +1,11 @@
 # CSCI 208 Bank Account List
+## GRADE: 97 of 100
+* Submitted on time
+* Makefile present, but it has minor issues (see comments) [-3]
+* Program compiles and links without errors or warnings
+* Passes my test cases, implements the specs correctly
+* Input file present, correctly formatted, differs from my example
+* Style is good and followed my protocol for separating files, very good commenting
 
 ## Description:
 Write a program that reads a file of bank accounts then reports the accounts **in reverse of the order** you received them.  Your program will ask the user for the name of the file then read that file to build an array of bank accounts.  Each bank account must contain a `string` field for *first name*, a `string` field for *last name*, a `double` field for *amount*, and a, `int` field for account number.  You will print out the account information after you read all the data, from an *array* in a specific format, described below.
